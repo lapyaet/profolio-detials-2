@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profolio Details 2</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
     <!--home start-->
@@ -64,14 +65,31 @@
     <section class="project">
         <div class="project__container">
             <div class="project__container-item1">
-                <img src="./image/resource/Mask Group.png" alt="" class="apple">
-                <img src="./image/resource/Mask Group-mobile.png" alt="" class="apple__mobile">
-                <button class="prevBtn">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button class="nextBtn">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                          <img src="./image/resource/Mask Group.png" alt="" class="apple">
+                          <img src="./image/resource/Mask Group-mobile.png" alt="" class="apple__mobile">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="./image/resource/Mask Group.png" alt="" class="apple">
+                          <img src="./image/resource/Mask Group-mobile.png" alt="" class="apple__mobile">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="./image/resource/Mask Group.png" alt="" class="apple">
+                          <img src="./image/resource/Mask Group-mobile.png" alt="" class="apple__mobile">
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                  </div>
             </div>
             <div class="project__container-item2">
                 <div class="project__container-item2-left">
@@ -260,5 +278,27 @@
     </section>
     <!--footer end-->
     <script src="https://kit.fontawesome.com/b053ab4793.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+  loop: true,
+
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+    </script>
 </body>
 </html>

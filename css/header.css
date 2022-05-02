@@ -16,6 +16,7 @@
 nav ul {
     display: flex;
     gap: 1.5rem;
+    margin-left: 4rem;
 }
 
 nav ul li a {
@@ -64,7 +65,7 @@ label .check-btn {
 
 
 
-@media (min-width:0) and (max-width:580px) {
+@media (min-width:0) and (max-width:620px) {
     .header {
         width: 90%;
     }
@@ -95,6 +96,7 @@ label .check-btn {
     
     label {
         display: block;
+        margin-top: 0.2rem;
     }
 
     .mobile-nav li {
